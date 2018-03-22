@@ -5,7 +5,8 @@ module.exports = {
     './resources/styles/app.scss'
   ],
   output: {
-    filename: 'public/app.js'
+    path: __dirname + "/public",
+    filename: 'app.js'
   },
   module: {
     rules: [
@@ -17,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'public/app.css'
+      filename: 'app.css'
     })
   ]
 }
