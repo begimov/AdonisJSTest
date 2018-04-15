@@ -2,8 +2,6 @@
 node_modules
 npm-debug.log
 
-database/adonis.sqlite
-
 # Adonis directory for storing tmp files
 tmp
 
@@ -16,3 +14,4 @@ yarn.lock
 
 # The development sqlite file
 database/development.sqlite
+database/adonis.sqlite
