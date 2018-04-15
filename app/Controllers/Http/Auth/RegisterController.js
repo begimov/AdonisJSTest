@@ -5,8 +5,10 @@ class RegisterController {
         return view.render('auth.register')
     }
 
-    register () {
-        return 'REGISTER POST'
+    register ({ request }) {
+        const { email, username, password } = request.all()
+
+        return request.all()
     }
 }
 
