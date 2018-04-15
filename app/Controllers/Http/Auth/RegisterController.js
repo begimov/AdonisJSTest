@@ -8,7 +8,11 @@ class RegisterController {
     register ({ request }) {
         const { email, username, password } = request.all()
 
-        return request.all()
+        const rules = {
+            email: 'required|email|unique:users,email',
+            username: 'required|unique:users,username',
+            password: 'required'
+        }
     }
 }
 
