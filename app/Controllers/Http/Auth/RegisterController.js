@@ -6,7 +6,7 @@ class RegisterController {
     }
 
     register () {
-        //
+        return 'REGISTER POST'
     }
 }
 
