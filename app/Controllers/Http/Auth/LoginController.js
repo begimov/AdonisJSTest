@@ -7,7 +7,7 @@ class LoginController {
         return view.render('auth.login')
     }
 
-    async login({ request, response, session }) {
+    async login({ request, response, session, auth }) {
         const { email, password } = request.all()
 
         const rules = {
@@ -22,7 +22,9 @@ class LoginController {
             return response.redirect('back')
         }
 
-        return '!!!!'
+        await auth.attempt(email, password)
+
+        return response.route('home')
     }
 }
 
