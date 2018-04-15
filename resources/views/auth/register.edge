@@ -7,27 +7,28 @@
         <div class="column is-4 is-offset-4">
             <h3 class="title has-text-grey">Register</h3>
             <div class="box">
-            <form action="{{ route('auth.register') }}" method="POST">
-                <div class="field">
-                <div class="control">
-                    <input class="input is-large" name="email" type="email" placeholder="Your email" autofocus="" value="">
-                </div>
-                </div>
+                <form action="{{ route('auth.register') }}" method="POST">
+                    {{ csrfField() }}
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-large" name="email" type="email" placeholder="Your email" autofocus="" value="">
+                        </div>
+                    </div>
 
-                <div class="field">
-                <div class="control">
-                    <input class="input is-large" name="username" type="text" placeholder="Choose a username" autofocus="" value="">
-                </div>
-                </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-large" name="username" type="text" placeholder="Choose a username" autofocus="" value="">
+                        </div>
+                    </div>
 
-                <div class="field">
-                <div class="control">
-                    <input class="input is-large" name="password" type="password" placeholder="Choose a password">
-                </div>
-                </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-large" name="password" type="password" placeholder="Choose a password">
+                        </div>
+                    </div>
 
-                <button class="button is-block is-info is-large is-fullwidth">Register</button>
-            </form>
+                    <button class="button is-block is-info is-large is-fullwidth">Register</button>
+                </form>
             </div>
         </div>
         </div>
