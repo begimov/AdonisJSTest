@@ -8,7 +8,7 @@ class RegisterController {
         return view.render('auth.register')
     }
 
-    async register ({ request, response, session }) {
+    async register ({ request, response, session, auth }) {
         const { email, username, password } = request.all()
 
         const rules = {
@@ -28,6 +28,9 @@ class RegisterController {
 
         user.fill({ email, username, password })
         await user.save()
+
+        await auth.attempt(email, password)
+
         return response.route('home')
     }
 }
