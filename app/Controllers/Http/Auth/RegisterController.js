@@ -1,8 +1,8 @@
 'use strict'
 
 class RegisterController {
-    index () {
-        return 'register index'
+    index ({ view }) {
+        return view.render('auth.register')
     }
 }
 
